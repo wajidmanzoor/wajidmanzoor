@@ -27,36 +27,44 @@
       <span id="progress-bar"></span>
     </div>
 
+    <!-- ─── Navigation ─────────────────────────────── -->
     <header class="site-nav" id="site-nav">
-      <a class="brand" href="#top" aria-label="Wajid Manzoor home">WM</a>
-      <nav class="nav-links" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Home">WM</a>
+
+      <nav class="nav-links" id="nav-links" aria-label="Primary navigation">
         <a href="#about">About</a>
         <a href="#research">Research</a>
         <a href="#publications">Papers</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
       </nav>
+
       <a class="nav-pill" href="mailto:wajidm36@students.rowan.edu">wajidm36@students.rowan.edu</a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
     </header>
 
     <main id="top" class="page-shell">
 
-      <!-- ─── Hero ─────────────────────────────────── -->
+      <!-- ─── Hero ──────────────────────────────────── -->
       <section class="hero section">
         <div class="hero-copy" data-reveal>
-          <p class="kicker">GPU Systems · Graph Mining · Data Science</p>
+          <p class="kicker">Ph.D. Candidate · GPU Systems · Graph Mining</p>
           <h1>
             <span>Wajid</span>
             <span class="name-highlight">Manzoor</span>
           </h1>
           <p class="hero-summary">
-            Exact algorithms.<br />Real GPU hardware.<br />Hard problems at scale.
+            Exact algorithms.<br />Real GPU hardware.<br />Hard problems, solved.
           </p>
           <p class="hero-subcopy">
-            Ph.D. candidate in Data Science at Rowan University. I build GPU-accelerated systems for
-            densest subgraph discovery and quasi-clique mining — problems where combinatorial
-            correctness and hardware throughput have to coexist.
+            I build GPU-accelerated systems for dense subgraph discovery and
+            graph mining at Rowan University — where combinatorial correctness
+            and parallel hardware performance have to coexist.
           </p>
 
           <div class="hero-actions">
@@ -81,7 +89,7 @@
             </li>
             <li>
               <strong>Deloitte USI</strong>
-              <span>Enterprise cloud engineering across Oracle, Workday, Salesforce, and Stripe</span>
+              <span>Cloud engineering across Oracle, Workday, Salesforce &amp; Stripe</span>
             </li>
           </ul>
         </div>
@@ -93,17 +101,12 @@
 
           <figure class="portrait-card">
             <div class="portrait-tag">Research + Systems</div>
-            <img
-              src="assets/wajid.jpeg"
-              alt="Portrait of Wajid Manzoor"
-              width="664"
-              height="664"
-            />
+            <img src="assets/wajid.jpeg" alt="Wajid Manzoor" width="664" height="664" />
           </figure>
 
           <article class="floating-note note-top">
             <span class="note-label">Current focus</span>
-            <p>Exact graph algorithms designed for GPU thread hierarchies — not approximations, the real answer.</p>
+            <p>Exact GPU algorithms for dense subgraph discovery — correctness guaranteed, hardware-aware.</p>
           </article>
 
           <article class="floating-note note-bottom">
@@ -121,13 +124,13 @@
           <span>Quasi-Clique Mining</span>
           <span>Exact Algorithms</span>
           <span>Parallel Systems</span>
-          <span>Scalable Data Science</span>
+          <span>k-Plex Enumeration</span>
           <span>Dense Subgraph Discovery</span>
           <span>GPU Graph Mining</span>
           <span>Quasi-Clique Mining</span>
           <span>Exact Algorithms</span>
           <span>Parallel Systems</span>
-          <span>Scalable Data Science</span>
+          <span>k-Plex Enumeration</span>
         </div>
       </section>
 
@@ -141,23 +144,21 @@
         <div class="profile-grid">
           <article class="panel profile-story" data-reveal>
             <p class="story-intro">
-              Most graph mining research trades exactness for speed. I work on
-              closing that gap — finding the real answer, not an approximation,
-              at the scale that modern hardware makes possible.
+              Most graph mining research trades exactness for speed.
+              I work on closing that gap — finding the real answer,
+              not an approximation, at the scale that modern GPU hardware makes possible.
             </p>
             <p>
-              Right now that means GPU-accelerated algorithms for dense subgraph
-              discovery: densest subgraph, quasi-cliques, k-plex enumeration.
-              These are problems where the combinatorial structure of the
-              pruning strategy and the physical layout of data in GPU memory
-              both determine whether you finish in seconds or never.
+              My focus is on GPU-accelerated exact algorithms for dense subgraph
+              discovery: densest subgraph, maximal quasi-cliques, and k-plex
+              enumeration. These are problems where pruning strategy and memory
+              layout on the GPU matter as much as algorithmic correctness.
             </p>
             <p>
-              Before research became my main focus, I spent two years in cloud
-              engineering at Deloitte USI — building production integrations and
-              data pipelines for enterprise clients. That work taught me to care
-              about correctness under real-world constraints, not just clean
-              theoretical settings. I still carry that bias.
+              Before research became my main lane, I spent two years in cloud
+              engineering at Deloitte USI — shipping production pipelines and
+              integrations for enterprise clients. That experience built a
+              lasting bias: elegant theory should survive contact with real systems.
             </p>
           </article>
 
@@ -173,11 +174,15 @@
             </div>
             <div class="snapshot-row">
               <span>Research</span>
-              <strong>GPU graph mining, dense subgraphs, quasi-cliques, exact algorithms</strong>
+              <strong>GPU graph mining · dense subgraphs · quasi-cliques · exact algorithms</strong>
             </div>
             <div class="snapshot-row">
               <span>Stack</span>
-              <strong>Python · PyTorch · TensorFlow · PySpark · SQL · AWS · REST APIs</strong>
+              <strong>Python · CUDA · PyTorch · TensorFlow · PySpark · SQL · AWS</strong>
+            </div>
+            <div class="snapshot-row">
+              <span>Open to</span>
+              <strong>Research collaborations · internships · technical conversations</strong>
             </div>
           </aside>
         </div>
@@ -195,9 +200,9 @@
             <span class="focus-index">01</span>
             <h3>Exact GPU Graph Mining</h3>
             <p>
-              Algorithms that don't approximate — combined with a deep
-              understanding of GPU thread hierarchy, memory latency, and
-              warp-level execution so that "exact" doesn't mean "slow."
+              Algorithms that maintain exactness while fully exploiting GPU thread
+              hierarchies and warp-level parallelism. The goal is the real answer,
+              on hardware fast enough for it to matter.
             </p>
           </article>
 
@@ -205,19 +210,19 @@
             <span class="focus-index">02</span>
             <h3>Dense Structure Discovery</h3>
             <p>
-              Densest subgraphs, quasi-cliques, k-plex enumeration — clique
-              relaxation problems where combinatorial bound tightness and data
-              parallelism both drive performance.
+              Densest subgraphs, maximal quasi-cliques, and k-plex enumeration —
+              clique relaxation problems where combinatorial pruning and GPU memory
+              coalescing are equally load-bearing.
             </p>
           </article>
 
           <article class="panel focus-card" data-reveal data-delay="0.16">
             <span class="focus-index">03</span>
-            <h3>Algorithms Meet Hardware</h3>
+            <h3>Algorithms Meets Hardware</h3>
             <p>
-              A foundation in optimization, machine learning, time series, and
-              scientific computing — the bridge between theoretical guarantees
-              and systems that actually run.
+              A foundation in optimization, machine learning, and scientific
+              computing — the bridge between theoretical guarantees and
+              systems that actually run at scale.
             </p>
           </article>
         </div>
@@ -226,7 +231,7 @@
       <!-- ─── Publications ──────────────────────────── -->
       <section id="publications" class="section">
         <div class="section-heading" data-reveal>
-          <p class="kicker">Selected Papers</p>
+          <p class="kicker">Selected Publications</p>
           <h2>Research output.</h2>
         </div>
 
@@ -236,47 +241,30 @@
             <h3>Bound-Tightened Densest Subgraph Discovery on GPU</h3>
             <p class="paper-summary">
               Exact GPU-accelerated densest subgraph discovery with tighter
-              upper-bound pruning. Achieves significant speedups over
-              CPU-based baselines while preserving exact solutions.
+              upper-bound pruning. Delivers significant speedups over
+              CPU baselines while preserving solution exactness.
             </p>
             <p class="paper-authors">
               Wajid Manzoor, Ke Fan, Chaudhary Muhammad Shaheer Yasir, Guimu Guo
             </p>
             <div class="paper-links">
-              <a
-                href="https://2026.sigmod.org/sigmod_papers.shtml"
-                target="_blank"
-                rel="noreferrer"
-              >Conference listing</a>
-              <a
-                href="https://guimuguo.github.io/publications/"
-                target="_blank"
-                rel="noreferrer"
-              >Lab publications</a>
+              <a href="https://2026.sigmod.org/sigmod_papers.shtml" target="_blank" rel="noreferrer">Conference listing</a>
+              <a href="https://guimuguo.github.io/publications/" target="_blank" rel="noreferrer">Lab publications</a>
             </div>
           </article>
 
-          <div>
-            <article class="paper panel" data-reveal data-delay="0.08" style="margin-bottom:1rem">
+          <div class="pub-stack">
+            <article class="paper panel" data-reveal data-delay="0.08">
               <p class="paper-tag">IEEE BigData 2025</p>
               <h3>GPU-Accelerated Maximal Quasi-Clique Mining</h3>
               <p>
-                Scalable GPU approach to maximal quasi-clique mining built around
-                cache-efficient data structures, memory coalescing, and balanced
-                parallel work distribution.
+                Scalable GPU approach using cache-efficient data structures,
+                memory coalescing, and load-balanced parallel enumeration.
               </p>
               <p class="paper-authors">Michael Greenbaum, Ke Fan, Wajid Manzoor, Guimu Guo</p>
               <div class="paper-links">
-                <a
-                  href="https://kokofan16.github.io/assets/papers/bigdata-2025.pdf"
-                  target="_blank"
-                  rel="noreferrer"
-                >Read paper</a>
-                <a
-                  href="https://dblp.org/db/conf/bigdataconf/bigdataconf2025"
-                  target="_blank"
-                  rel="noreferrer"
-                >DBLP record</a>
+                <a href="https://kokofan16.github.io/assets/papers/bigdata-2025.pdf" target="_blank" rel="noreferrer">Read paper</a>
+                <a href="https://dblp.org/db/conf/bigdataconf/bigdataconf2025" target="_blank" rel="noreferrer">DBLP</a>
               </div>
             </article>
 
@@ -284,17 +272,12 @@
               <p class="paper-tag">Preprint · PVLDB Volume 19</p>
               <h3>GPU-Accelerated Maximal k-Plex Enumeration</h3>
               <p>
-                Extending the GPU-exact approach to efficient enumeration of
-                maximal k-plexes — another core clique-relaxation problem with
-                dense structure.
+                Extending GPU-exact methods to efficient enumeration of maximal
+                k-plexes — a core clique relaxation problem with broad applications.
               </p>
               <p class="paper-authors">Shaheer Mohammad, Ke Fan, Wajid Manzoor, Guimu Guo</p>
               <div class="paper-links">
-                <a
-                  href="https://scholar.google.com/citations?user=nlaND6wAAAAJ&hl=en&oi=ao"
-                  target="_blank"
-                  rel="noreferrer"
-                >Scholar profile</a>
+                <a href="https://scholar.google.com/citations?user=nlaND6wAAAAJ&hl=en&oi=ao" target="_blank" rel="noreferrer">Scholar profile</a>
               </div>
             </article>
           </div>
@@ -319,8 +302,8 @@
               <p class="chapter-location">Glassboro, New Jersey</p>
               <ul class="chapter-points">
                 <li>Building GPU-accelerated exact algorithms for dense subgraph discovery and graph mining.</li>
-                <li>Published at SIGMOD 2026 (first author) and IEEE BigData 2025.</li>
-                <li>Research sits at the intersection of combinatorial algorithms and GPU systems engineering.</li>
+                <li>First-author paper accepted at SIGMOD 2026; co-authored paper at IEEE BigData 2025.</li>
+                <li>Research spans combinatorial algorithm design, GPU systems, and scalable graph mining.</li>
               </ul>
             </div>
           </article>
@@ -334,9 +317,9 @@
               <h3>Business Analyst — Cloud Engineering</h3>
               <p class="chapter-location">Hyderabad, India</p>
               <ul class="chapter-points">
-                <li>Built data integrations and cloud pipelines for clients including 10x Genomics and Gilead Sciences.</li>
-                <li>Worked across Oracle, Workday, Salesforce, Stripe, Bynder, Boomi, and related enterprise systems.</li>
-                <li>Owned API design, migration, testing, hypercare, and production deployment coordination.</li>
+                <li>Designed and delivered data integration pipelines for 10x Genomics and Gilead Sciences.</li>
+                <li>Worked across Oracle, Workday, Salesforce, Stripe, Bynder, and Boomi ecosystems.</li>
+                <li>Owned full delivery lifecycle: API design, migration, testing, hypercare, and production coordination.</li>
               </ul>
             </div>
           </article>
@@ -350,8 +333,8 @@
               <h3>B.Tech. — Computer Science &amp; Engineering</h3>
               <p class="chapter-location">Srinagar, India</p>
               <ul class="chapter-points">
-                <li>Core coursework in AI, computer vision, optimization, big data, and scientific computing.</li>
-                <li>Co-founded technical club WeByte; helped coordinate the annual Techvaganza event.</li>
+                <li>Core study in AI, computer vision, optimization, big data, and scientific computing.</li>
+                <li>Co-founded technical society WeByte; helped organize the annual Techvaganza event.</li>
                 <li>Completed internships in wireless technology and engineering support.</li>
               </ul>
             </div>
@@ -363,7 +346,7 @@
       <section id="projects" class="section">
         <div class="section-heading" data-reveal>
           <p class="kicker">Projects</p>
-          <h2>Side work &amp; experiments.</h2>
+          <h2>Technical experiments.</h2>
         </div>
 
         <div class="project-grid">
@@ -371,9 +354,9 @@
             <p class="project-tag">Featured Build</p>
             <h3>Batukh</h3>
             <p>
-              A Python package for digitizing historical documents — page
-              segmentation, layout extraction, baseline detection, OCR pipeline,
-              and visualization. Designed for low-resource and archival use cases.
+              Python package for digitizing historical manuscripts — page
+              segmentation, layout extraction, baseline detection, OCR
+              pipeline, and visualization. Designed for archival and low-resource use cases.
             </p>
             <div class="project-chips">
               <span>TensorFlow</span>
@@ -387,8 +370,8 @@
             <p class="project-tag">Applied Finance</p>
             <h3>Stock Analysis Suite</h3>
             <p>
-              Time-series forecasting and portfolio optimization using ARIMA, SVR,
-              ANN, and LSTM. Includes OHLC visualization and multi-model comparison.
+              Time-series forecasting and portfolio optimization using ARIMA,
+              SVR, ANN, and LSTM with OHLC visualization.
             </p>
           </article>
 
@@ -396,19 +379,73 @@
             <p class="project-tag">Optimization</p>
             <h3>Linear Optimization Studies</h3>
             <p>
-              Computational experiments with GurobiPy and NumPy — simplex methods,
-              duality theory, and optimization workflows across real problem instances.
+              Computational experiments with GurobiPy and NumPy — simplex
+              methods, duality theory, and real problem instances.
             </p>
           </article>
 
           <article class="panel project-card" data-reveal data-delay="0.24">
-            <p class="project-tag">Creative Computing</p>
+            <p class="project-tag">Generative AI</p>
             <h3>Rollercoaster Design Generator</h3>
             <p>
-              An ANN-based evolutionary model built from scratch to generate
-              2D coaster designs that balance physical realism with generative novelty.
+              ANN-based evolutionary model generating 2D coaster designs that
+              balance physical realism with generative novelty.
             </p>
           </article>
+        </div>
+      </section>
+
+      <!-- ─── Skills ────────────────────────────────── -->
+      <section id="skills" class="section">
+        <div class="section-heading" data-reveal>
+          <p class="kicker">Technical Skills</p>
+          <h2>Tools of the trade.</h2>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-group" data-reveal>
+            <h4>Languages</h4>
+            <div class="skill-tags">
+              <span>Python</span>
+              <span>C++</span>
+              <span>CUDA</span>
+              <span>SQL</span>
+              <span>JavaScript</span>
+            </div>
+          </div>
+
+          <div class="skill-group" data-reveal data-delay="0.06">
+            <h4>ML / Data</h4>
+            <div class="skill-tags">
+              <span>PyTorch</span>
+              <span>TensorFlow</span>
+              <span>PySpark</span>
+              <span>Scikit-learn</span>
+              <span>NumPy / Pandas</span>
+            </div>
+          </div>
+
+          <div class="skill-group" data-reveal data-delay="0.12">
+            <h4>Systems</h4>
+            <div class="skill-tags">
+              <span>CUDA / GPU Programming</span>
+              <span>Parallel Algorithms</span>
+              <span>Graph Databases</span>
+              <span>REST APIs</span>
+              <span>Boomi / Workday</span>
+            </div>
+          </div>
+
+          <div class="skill-group" data-reveal data-delay="0.18">
+            <h4>Infrastructure</h4>
+            <div class="skill-tags">
+              <span>AWS</span>
+              <span>Oracle Cloud</span>
+              <span>Salesforce</span>
+              <span>Git / GitHub</span>
+              <span>Linux</span>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -422,18 +459,18 @@
 
           <div class="service-grid">
             <article class="panel service-card" data-reveal>
-              <h3>Review Service</h3>
+              <h3>Peer Review</h3>
               <p>Conference co-reviewer for IEEE BigData 2024, IEEE BigData 2025, and The Web Conference 2026.</p>
             </article>
 
             <article class="panel service-card" data-reveal data-delay="0.08">
-              <h3>ACM Member</h3>
-              <p>Active member of the ACM student chapter at Rowan University and contributor to student-led research initiatives.</p>
+              <h3>ACM Chapter</h3>
+              <p>Active member of the ACM student chapter at Rowan University and contributor to student research initiatives.</p>
             </article>
 
             <article class="panel service-card" data-reveal data-delay="0.16">
               <h3>Student Leadership</h3>
-              <p>Co-founder of WeByte and coordinator of Techvaganza at NIT Srinagar.</p>
+              <p>Co-founder of WeByte technical society and coordinator of Techvaganza at NIT Srinagar.</p>
             </article>
           </div>
         </div>
@@ -442,20 +479,15 @@
           <p class="kicker">Contact</p>
           <h2>Let's talk.</h2>
           <p class="contact-copy">
-            I'm open to research collaborations, conversations about GPU systems
-            and graph algorithms, and anything where hard problems meet real
-            infrastructure.
+            Open to research collaborations, conversations about GPU systems
+            and graph algorithms, and any problem where algorithmic rigor
+            meets real infrastructure.
           </p>
           <div class="contact-links">
             <a href="mailto:wajidm36@students.rowan.edu">wajidm36@students.rowan.edu</a>
             <a href="https://github.com/wajidmanzoor" target="_blank" rel="noreferrer">github.com/wajidmanzoor</a>
             <a href="https://linkedin.com/in/wajid-manzoor/" target="_blank" rel="noreferrer">linkedin.com/in/wajid-manzoor</a>
-            <a
-              href="https://scholar.google.com/citations?user=nlaND6wAAAAJ&hl=en&oi=ao"
-              target="_blank"
-              rel="noreferrer"
-            >Google Scholar</a>
-            <a href="assets/Wajid_Manzoor_Resume.pdf" download>Download Resume</a>
+            <a href="https://scholar.google.com/citations?user=nlaND6wAAAAJ&hl=en&oi=ao" target="_blank" rel="noreferrer">Google Scholar</a>
             <a href="assets/Wajid_Manzoor_CV.pdf" download>Download CV</a>
           </div>
         </aside>
@@ -464,7 +496,12 @@
     </main>
 
     <footer class="site-footer">
-      <p>Wajid Manzoor · <span id="year"></span></p>
+      <p>Wajid Manzoor &ensp;·&ensp; <span id="year"></span></p>
+      <nav class="footer-links">
+        <a href="https://github.com/wajidmanzoor" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://linkedin.com/in/wajid-manzoor/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=nlaND6wAAAAJ&hl=en&oi=ao" target="_blank" rel="noreferrer">Scholar</a>
+      </nav>
     </footer>
 
     <script src="script.js"></script>
