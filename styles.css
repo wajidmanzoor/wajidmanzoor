@@ -3,10 +3,10 @@
    ══════════════════════════════════════════ */
 :root {
   /* Backgrounds */
-  --bg: #0e1118;
-  --bg-surface: #131824;
-  --bg-card: rgba(19, 24, 36, 0.78);
-  --bg-card-hover: rgba(26, 33, 50, 0.9);
+  --bg: #08090e;
+  --bg-surface: #0d1017;
+  --bg-card: rgba(13, 17, 28, 0.75);
+  --bg-card-hover: rgba(20, 26, 42, 0.9);
 
   /* Borders */
   --border: rgba(255, 255, 255, 0.07);
@@ -512,7 +512,7 @@ p { line-height: 1.76; margin: 0; }
   position: absolute;
   top: 2.5rem;
   right: 1.8rem;
-  width: min(58%, 19.5rem);
+  width: min(72%, 23rem);
   padding: 0.85rem;
   border-radius: 24px;
   background: rgba(255, 255, 255, 0.04);
@@ -532,96 +532,7 @@ p { line-height: 1.76; margin: 0; }
   filter: saturate(0.88) contrast(1.04);
 }
 
-.portrait-tag {
-  position: absolute;
-  top: -0.85rem;
-  left: 1rem;
-  padding: 0.48rem 0.85rem;
-  border-radius: var(--r-pill);
-  background: linear-gradient(140deg, var(--indigo-deep), #7c3aed);
-  color: #fff;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.4);
-}
 
-.floating-note {
-  position: absolute;
-  padding: 0.95rem 1rem;
-  border-radius: 18px;
-  background: rgba(14, 17, 26, 0.92);
-  color: rgba(221, 228, 240, 0.92);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(20px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
-  z-index: 2;
-}
-
-.floating-note .note-label { color: var(--sky); }
-
-.floating-note p {
-  margin: 0.38rem 0 0;
-  line-height: 1.55;
-  font-size: 0.85rem;
-}
-
-.note-top {
-  top: 2.5rem;
-  left: 1.5rem;
-  width: clamp(10rem, 32%, 13rem);
-  animation: float 8s ease-in-out infinite;
-}
-
-.note-bottom {
-  bottom: 1.8rem;
-  left: 1.5rem;
-  width: clamp(11rem, 36%, 14.5rem);
-  animation: float 9s ease-in-out infinite;
-  animation-delay: -3.5s;
-}
-
-/* ══════════════════════════════════════════
-   Marquee
-   ══════════════════════════════════════════ */
-.marquee-strip {
-  overflow: hidden;
-  padding: 0.85rem 0;
-  background: rgba(255, 255, 255, 0.025);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  border-radius: var(--r-pill);
-}
-
-.marquee-track {
-  display: flex;
-  align-items: center;
-  gap: 2.5rem;
-  width: max-content;
-  animation: marquee 30s linear infinite;
-}
-
-.marquee-track span {
-  position: relative;
-  padding-left: 1.15rem;
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  white-space: nowrap;
-  color: var(--text-soft);
-}
-
-.marquee-track span::before {
-  content: "";
-  position: absolute;
-  left: 0; top: 50%;
-  width: 0.35rem; height: 0.35rem;
-  border-radius: 50%;
-  transform: translateY(-50%);
-  background: var(--indigo);
-}
 
 /* ══════════════════════════════════════════
    Section headings
@@ -1039,16 +950,6 @@ p { line-height: 1.76; margin: 0; }
   to { transform: rotate(360deg); }
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-@keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-
 @keyframes shimmer {
   0%, 100% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -1089,19 +990,7 @@ p { line-height: 1.76; margin: 0; }
   .service-grid { grid-template-columns: 1fr; }
   .skills-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
-  .hero-stage { min-height: 42rem; }
-
-  .portrait-card {
-    position: relative;
-    top: 2.5rem;
-    right: auto;
-    left: 50%;
-    transform: translateX(-50%) perspective(900px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y));
-    width: min(74%, 20rem);
-  }
-
-  .note-top { top: 1.4rem; left: 1.2rem; }
-  .note-bottom { bottom: 1.4rem; left: 1.2rem; }
+  .hero-stage { min-height: 38rem; }
 }
 
 /* ══════════════════════════════════════════
@@ -1123,10 +1012,7 @@ p { line-height: 1.76; margin: 0; }
   .hero-actions { flex-direction: column; align-items: stretch; }
   .button { text-align: center; justify-content: center; }
 
-  .hero-stage { min-height: 34rem; }
-  .portrait-card { width: calc(100% - 2.2rem); }
-  .floating-note { width: calc(100% - 2.2rem); }
-  .note-bottom { display: none; }
+  .hero-stage { min-height: 32rem; }
 
   /* Mobile nav */
   .nav-pill { display: none; }
